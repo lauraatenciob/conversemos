@@ -1,10 +1,9 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 24px 16px;
-  margin-top: 85px;
   font-family: "Be Vietnam Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

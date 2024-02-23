@@ -2,43 +2,16 @@
   --main-color: #ff5970;
   --ligth-color: #F2F0F4;
   --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  --profundas-color: rgb(221, 94, 137);
-  --profundas-gradient: linear-gradient(
-    138deg,
-    rgba(221, 94, 137, 1) 0%,
-    rgba(247, 187, 151, 1) 100%
-  );
-  --casuales-color: rgb(101, 78, 163);
-  --casuales-gradient: linear-gradient(
-    138deg,
-    rgba(101, 78, 163, 1) 0%,
-    rgba(234, 175, 200, 1) 100%
-  );
-  --picantes-color: rgb(76, 184, 196);
-  --picantes-gradient: linear-gradient(
-    138deg,
-    rgba(76, 184, 196, 1) 0%,
-    rgba(60, 211, 173, 1) 100%
-  );
-  --queprefieres-color: rgb(242, 153, 74);
-  --queprefieres-gradient: linear-gradient(
-    138deg,
-    rgba(242, 153, 74, 1) 0%,
-    rgba(242, 201, 76, 1) 100%
-  );
 }
 
-.App {
-  text-align: center;
+
+.container {
+  margin: 24px 16px;
 }
 
 nav {
   background-color: transparent;
   color: var(--main-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 60px;
 }
 
@@ -48,8 +21,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   max-width: 1280px;
-  padding: 0 30px;
-  margin: 20px auto;
+  padding: 24px 16px;
+ 
 }
 
 .menu {
@@ -70,7 +43,7 @@ nav {
 }
 
 .menu a:hover {
-  color: white;
+  color: var(--ligth-color);
   background-color: var(--main-color);
 
 }
@@ -113,8 +86,6 @@ nav {
   height: 100vh;
   background-color: var(--ligth-color);
   position: absolute;
-  top: 56px;
-  left: 0;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -130,8 +101,8 @@ nav {
   text-decoration: none;
   color: var(--main-color);
   padding: 8px 16px;
-  margin: 0 16px;
   border-radius: 90px;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -164,12 +135,14 @@ nav {
 }
 
 #home-image {
-  margin-top: 97px;
-  margin-bottom: 60px;
+  display: block;
+  margin: 55px auto;
+  width: 100%;
 }
 
 #welcome-text {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .button {
@@ -186,7 +159,7 @@ nav {
 
 .main-button {
   background-color: var(--main-color);
-  color: white;
+  color: var(--ligth-color);
   margin-bottom: 16px;
 }
 
@@ -199,6 +172,7 @@ nav {
 .about-image {
   margin-top: 50px;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .about {
@@ -218,20 +192,20 @@ nav {
 .large-icon {
   width: 188px;
   height: 188px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  display: block;
+  margin: 50px auto;
 }
 
 .small-text {
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 200;
   text-align: left;
   margin-bottom: 8px;
-  color: white;
+  color: var(--ligth-color);
 }
 
 #question {
-  color: white;
+  color: var(--ligth-color);
   margin-bottom: 32px;
 }
 
@@ -246,13 +220,12 @@ nav {
 .category-card {
   width: 328px;
   height: 98px;
+  padding: 8px;
   border-radius: 18px;
-  background: var(--profundas-color);
-  background: var(--profundas-gradient);
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 32px;
   box-shadow: var(--card-shadow);
 }
@@ -268,15 +241,13 @@ nav {
 input {
   width: 20px;
   height: 20px;
-  border: 1px solid white;
+  border: 1px solid var(--ligth-color);
   border-radius: 5px;
   background-color: transparent;
-  position: relative;
-  left: -100px;
 }
 
 .category-card .subtitle {
-  color: white;
+  color: var(--ligth-color);
   font-weight: 400;
   text-align: left;
 }
@@ -284,5 +255,9 @@ input {
 .category-icon {
   position: relative;
   top: -28px;
-  right: -10px;
+  right: -8px;
+}
+
+#category-button {
+  margin-top: 36px;
 }

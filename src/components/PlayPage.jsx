@@ -2,7 +2,7 @@ import { ReactComponent as ProfundasIcon } from "../assets/nesting-dolls.svg";
 
 function PlayPage() {
   return (
-    <div id="play-page">
+    <div id="play-page" className="container">
       <ProfundasIcon className="large-icon" height={188} width={188}/>
       <p className="small-text">Profundas</p>
       <h1 id="question" className="subtitle">

@@ -1,17 +1,24 @@
-import { ReactComponent as ProfundasIcon } from "../assets/nesting-dolls.svg";
+import { categories } from "../data";
 
 function CategoryPage() {
   return (
-    <div>
+    <div className="container">
       <h1 className="title">Categorías</h1>
-      <div className="category-card">
-        <div className="description">
-          <input type="checkbox" className="category-checkbox"></input>
-          <p className="subtitle">Profundas</p>
-          <p className="small-text">Cosas que nunca habías pensado</p>
+
+      {categories.map((category) => (
+        <div className="category-card" key={category.id} id={category.id} style={{
+            background: category.background
+        }}>
+          <div className="description">
+            <input type="checkbox" className="category-checkbox"></input>
+            <p className="subtitle">{category.name}</p>
+            <p className="small-text">{category.description}</p>
+          </div>
+          <category.icon className="category-icon" />
         </div>
-        <ProfundasIcon className="category-icon"/>
-      </div>
+      ))}
+
+      <button className="button main-button" id="category-button">Empezar</button>
     </div>
   );
 }

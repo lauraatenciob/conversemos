@@ -4,7 +4,7 @@ import howToPlayImage from "../assets/play-image.png";
 
 function HomePage() {
   return (
-    <div id="home">
+    <div id="home" className="container">
       <div id="home-image">
         <img src={homeImage} alt="background-emojis"></img>
       </div>
