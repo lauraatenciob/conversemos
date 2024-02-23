@@ -1,9 +1,8 @@
 :root {
   --main-color: #ff5970;
-  --ligth-color: #F2F0F4;
+  --ligth-color: #f2f0f4;
   --card-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-
 
 .container {
   margin: 24px 16px;
@@ -22,7 +21,6 @@ nav {
   justify-content: space-between;
   max-width: 1280px;
   padding: 24px 16px;
- 
 }
 
 .menu {
@@ -45,7 +43,6 @@ nav {
 .menu a:hover {
   color: var(--ligth-color);
   background-color: var(--main-color);
-
 }
 
 .hamburguer {
@@ -112,7 +109,7 @@ nav {
   color: var(--ligth-color);
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .hamburguer {
     display: none;
   }
@@ -244,6 +241,38 @@ input {
   border: 1px solid var(--ligth-color);
   border-radius: 5px;
   background-color: transparent;
+  position: relative;
+}
+
+input::after {
+  border-radius: 2px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid var(--ligth-color);
+  opacity: 0;
+  border-top: 0;
+  border-left: 0;
+  left: 6px;
+  top: 3px;
+  transform: rotate(var(--r, 20deg));
+  content: "";
+  display: block;
+  position: absolute;
+  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+    opacity var(--d-o, 0.2s);
+}
+
+input:checked::after {
+  opacity: 1;
+}
+
+input:checked {
+  --r: 43deg;
+  --b: var(--active);
+  --bc: var(--active);
+  --d-o: 0.3s;
+  --d-t: 0.6s;
+  --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
 }
 
 .category-card .subtitle {
@@ -261,3 +290,4 @@ input {
 #category-button {
   margin-top: 36px;
 }
+

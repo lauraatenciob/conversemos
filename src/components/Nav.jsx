@@ -8,16 +8,24 @@ function Nav() {
   const menuItems = (
     <>
       <li>
-        <Link to="/"><i class="fa-solid fa-house"></i> Inicio</Link>
+        <Link to="/">
+          <i class="fa-solid fa-house"></i> Inicio
+        </Link>
       </li>
       <li>
-        <Link to="/categories"><i class="fa-solid fa-table-list"></i> Categorías</Link>
+        <Link to="/categories">
+          <i class="fa-solid fa-table-list"></i> Categorías
+        </Link>
       </li>
       <li>
-        <Link to="/play"><i class="fa-solid fa-face-grin-wink"></i> Jugar</Link>
+        <Link to="/play">
+          <i class="fa-solid fa-face-grin-wink"></i> Jugar
+        </Link>
       </li>
       <li>
-        <Link to="/#info-section"><i class="fa-solid fa-circle-question"></i> Acerca de</Link>
+        <Link to="/#info-section">
+          <i class="fa-solid fa-circle-question"></i> Acerca de
+        </Link>
       </li>
     </>
   );
@@ -40,7 +48,11 @@ function Nav() {
           </button>
         </div>
       </nav>
-      {activeHam && <div className="nav-dropdown">{menuItems}</div>}
+      {activeHam && (
+        <div className="nav-dropdown" onClick={() => setActiveHam(!activeHam)}>
+          {menuItems}
+        </div>
+      )}
     </div>
   );
 }

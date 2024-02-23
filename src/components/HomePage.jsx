@@ -1,6 +1,7 @@
 import homeImage from "../assets/home-image.png";
 import aboutImage from "../assets/about-image.png";
 import howToPlayImage from "../assets/play-image.png";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -11,8 +12,13 @@ function HomePage() {
       <h1 className="subtitle" id="welcome-text">
         Inicia las conversaciones más interesantes con tus amigos
       </h1>
-      <button className="button main-button">Ir a categorias</button>
-      <button className=" button outlined-button">Jugar</button>
+      <Link to="/categories">
+        <button className="button main-button">Ir a categorias</button>
+      </Link>
+      <Link to="/play">
+        <button className=" button outlined-button">Jugar</button>
+      </Link>
+
       <div id="info-section">
         <div id="about-section" className="section-about">
           <div className="about-image">
@@ -38,9 +44,11 @@ function HomePage() {
               conversación grupal.
             </p>
           </div>
-        </div>  
+        </div>
       </div>
-      <button className="button main-button">Empezar</button>
+      <Link to="/play">
+        <button className="button main-button">Empezar</button>
+      </Link>
     </div>
   );
 }
