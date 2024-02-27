@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { useState } from "react";
 
-function Nav() {
+function Nav({ colorWhite }) {
   const [activeHam, setActiveHam] = useState(false);
 
   const menuItems = (
@@ -33,7 +33,12 @@ function Nav() {
   return (
     <div className="navbar-container">
       <nav>
-        <div className="nav-container">
+        <div
+          className="nav-container"
+          style={{
+            color: colorWhite && activeHam === false ? "#f2f0f4" : "#ff5970",
+          }}
+        >
           <Logo />
           <div className="menu">{menuItems}</div>
           <button
@@ -41,6 +46,9 @@ function Nav() {
               activeHam ? "hamburguer active-hamburguer" : "hamburguer"
             }
             onClick={() => setActiveHam(!activeHam)}
+            style={{
+              color: "inherit",
+            }}
           >
             <span></span>
             <span></span>
