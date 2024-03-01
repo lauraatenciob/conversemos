@@ -9,16 +9,28 @@ import { useState } from "react";
 
 function PlayPage() {
   const selectedCategories = useSelector((state) => state.categories.selected);
-  const questions = generateQuestionBank(selectedCategories);
+  const [questions, setQuestions] = useState(
+    generateQuestionBank(selectedCategories)
+  );
 
-  const [question, setQuestion] = useState(generateRandomQuestion(questions));
+  const [question, setQuestion] = useState(
+    generateRandomQuestion(questions)[0]
+  );
 
   function handlePlayClick() {
-    setQuestion(generateRandomQuestion(questions));
+    const questionsBank =
+      questions.length === 0
+        ? generateQuestionBank(selectedCategories)
+        : questions;
+
+    const [newQuestion, newQuestionsBank] =
+      generateRandomQuestion(questionsBank);
+    setQuestion(newQuestion);
+    setQuestions(newQuestionsBank);
   }
 
   const currentCategory = categories.find(
-    (category) => category.id === question.categoryId
+    (category) => category.id === question.idCategory
   );
 
   return (
@@ -30,23 +42,25 @@ function PlayPage() {
           background: currentCategory.background,
         }}
       >
-        <div className="icon-container">
-          <currentCategory.icon className="large-icon" />
+        <div id="question-container">
+          <div className="icon-container">
+            <currentCategory.icon className="large-icon" />
+          </div>
+          <p className="small-text">{currentCategory.name}</p>
+          <h1 id="question" className="subtitle">
+            {question.text}
+          </h1>
+          <button
+            className="button main-button"
+            id="play-button"
+            style={{
+              color: currentCategory.color,
+            }}
+            onClick={handlePlayClick}
+          >
+            Siguiente
+          </button>
         </div>
-        <p className="small-text">{currentCategory.name}</p>
-        <h1 id="question" className="subtitle">
-          {question.text}
-        </h1>
-        <button
-          className="button main-button"
-          id="play-button"
-          style={{
-            color: currentCategory.color,
-          }}
-          onClick={handlePlayClick}
-        >
-          Siguiente
-        </button>
       </div>
     </>
   );

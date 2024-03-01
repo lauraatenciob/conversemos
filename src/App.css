@@ -27,6 +27,7 @@ nav {
   max-width: 1280px;
   padding: 24px 16px;
   background-color: transparent;
+  margin: 0 auto;
 }
 
 .menu {
@@ -41,7 +42,7 @@ nav {
 
 .menu a {
   text-decoration: none;
-  color: var(--main-color);
+  color: currentColor;
   padding: 8px 16px;
   border-radius: 90px;
   font-weight: 500;
@@ -88,7 +89,7 @@ nav {
 .nav-dropdown {
   width: 100vw;
   height: 100vh;
-  padding-top: 74px;
+  padding-top: 64px;
   background-color: var(--ligth-color);
   position: fixed;
   z-index: 90;
@@ -117,20 +118,6 @@ nav {
   color: var(--ligth-color);
 }
 
-@media (min-width: 768px) {
-  .hamburguer {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  .nav-dropdown {
-    display: none;
-  }
-}
-
 .subtitle {
   font-size: 20px;
   font-weight: 500;
@@ -142,7 +129,12 @@ nav {
 #home-image {
   display: block;
   margin: 42px auto;
+  text-align: center;
+}
+
+#home-image img {
   width: 100%;
+  max-width: 350px;
 }
 
 #welcome-text {
@@ -155,12 +147,20 @@ nav {
   font-family: "Be Vietnam Pro", sans-serif;
   border: none;
   height: 56px;
-  max-width: 328px;
   width: 100%;
   border-radius: 14px;
   font-size: 18px;
   font-weight: 500;
   box-shadow: var(--card-shadow);
+  transition: transform 15ms linear;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
+
+.button:not(:disabled):active {
+  transform: scale(0.98);
 }
 
 .main-button {
@@ -176,7 +176,6 @@ nav {
 }
 
 .about-image {
-  margin-top: 50px;
   margin-bottom: 8px;
   text-align: center;
 }
@@ -195,16 +194,22 @@ nav {
   margin: 50px 0;
 }
 
+.section-about {
+  margin-top: 50px;
+}
+
 .icon-container {
-  width: 188px;
-  height: 188px;
+  max-width: 188px;
+  max-height: 188px;
   display: block;
   margin: 32px auto;
+  text-align: center;
 }
 
 .large-icon {
   width: 100%;
   height: 100%;
+  max-width: 188px;
 }
 
 .small-text {
@@ -225,6 +230,7 @@ nav {
   width: 100vw;
   height: 100vh;
   padding: 74px 16px;
+  text-align: center;
 }
 
 .title {
@@ -235,7 +241,7 @@ nav {
 }
 
 .category-card {
-  width: 328px;
+  width: 100%;
   height: 98px;
   padding: 8px;
   border-radius: 18px;
@@ -245,6 +251,10 @@ nav {
   justify-content: space-between;
   margin-top: 32px;
   box-shadow: var(--card-shadow);
+  transition: transform 15ms linear;
+}
+.category-card:active {
+  transform: scale(0.98);
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
@@ -315,4 +325,94 @@ input:checked {
 #play-button {
   background-color: var(--ligth-color);
   font-weight: 600;
+}
+
+#footer-container {
+  width: 100%;
+  padding: 16px;
+  margin-top: 52px;
+  text-align: center;
+  background-color: rgb(252, 223, 223);
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  .hamburguer {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-dropdown {
+    display: none;
+  }
+
+  #buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  #buttons-container .button {
+    min-width: 328px;
+  }
+
+  .button {
+    max-width: 328px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  a {
+    text-decoration: none;
+    max-width: 328px;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #question-container {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #question-container .small-text {
+    text-align: center;
+  }
+
+  #info-section {
+    margin-top: 120px;
+  }
+
+  .section-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 52px;
+    padding: 0 280px;
+    margin: 120px auto;
+  }
+
+  #how-to-play-section {
+    flex-direction: row-reverse;
+  }
 }

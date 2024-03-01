@@ -3,24 +3,30 @@ import aboutImage from "../assets/about-image.png";
 import howToPlayImage from "../assets/play-image.png";
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function HomePage() {
   return (
     <>
       <Nav />
+
       <div id="home" className="container">
         <div id="home-image">
           <img src={homeImage} alt="background-emojis"></img>
         </div>
+
         <h1 className="subtitle" id="welcome-text">
           Inicia las conversaciones más interesantes con tus amigos
         </h1>
-        <Link to="/categories">
-          <button className="button main-button">Ir a categorias</button>
-        </Link>
-        <Link to="/play">
-          <button className=" button outlined-button">Jugar</button>
-        </Link>
+
+        <div id="buttons-container">
+          <Link to="/categories">
+            <button className="button main-button">Ir a categorias</button>
+          </Link>
+          <Link to="/play">
+            <button className=" button outlined-button">Jugar</button>
+          </Link>
+        </div>
 
         <div id="info-section">
           <div id="about-section" className="section-about">
@@ -53,6 +59,7 @@ function HomePage() {
           <button className="button main-button">Empezar</button>
         </Link>
       </div>
+      <Footer />
     </>
   );
 }

@@ -22,11 +22,6 @@ function Nav({ colorWhite }) {
           <i class="fa-solid fa-face-grin-wink"></i> Jugar
         </Link>
       </li>
-      <li>
-        <Link to="/#info-section">
-          <i class="fa-solid fa-circle-question"></i> Acerca de
-        </Link>
-      </li>
     </>
   );
 
@@ -57,7 +52,13 @@ function Nav({ colorWhite }) {
         </div>
       </nav>
       {activeHam && (
-        <div className="nav-dropdown" onClick={() => setActiveHam(!activeHam)}>
+        <div
+          className="nav-dropdown"
+          style={{
+            color: colorWhite && activeHam === false ? "#f2f0f4" : "#ff5970",
+          }}
+          onClick={() => setActiveHam(!activeHam)}
+        >
           {menuItems}
         </div>
       )}
