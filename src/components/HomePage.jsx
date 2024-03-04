@@ -36,8 +36,11 @@ function HomePage() {
             <div>
               <p className="subtitle about">¿En qué consiste?</p>
               <p className="text">
-                Este juego es ideal para esas ocasiones en las que quieres
-                romper el hielo e iniciar una buena conversación con tu amigos.
+                En este juego encontrarás una amplia variedad de preguntas
+                categorizadas para iniciar conversaciones interesantes con tus
+                amigos. Desde temas casuales y divertidos hasta cuestiones
+                profundas y trascendentales ¡La calidad de una buena
+                conversación está garantizada!
               </p>
             </div>
           </div>
@@ -48,9 +51,10 @@ function HomePage() {
             <div>
               <p className="subtitle about">¿Cómo jugar?</p>
               <p className="text">
-                Reúne a tus amigos, define la dinámica, elige mínimo una
-                categoría, lee la pregunta en voz alta y comienza a tener la
-                mejor conversación grupal.
+                Simplemente elige por lo menos una categoría que te llame la
+                atención, ¡y deja que las preguntas inicien la diversión! Toma
+                turnos respondiendo y profundizando en las respuestas para
+                conocer mejor a tus amigos y pasar momentos inolvidables juntos.
               </p>
             </div>
           </div>
