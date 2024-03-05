@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/conversemos/static/css/main.32279d9b.css",
+    "main.js": "/conversemos/static/js/main.0c19964e.js",
+    "static/js/453.ba8688e2.chunk.js": "/conversemos/static/js/453.ba8688e2.chunk.js",
+    "static/media/home-image.png": "/conversemos/static/media/home-image.8cf30f8527f27efc9244.png",
+    "static/media/film-frames.svg": "/conversemos/static/media/film-frames.df0aeaee6c0c47a0c52caf2dbc93e477.svg",
+    "static/media/logo.svg": "/conversemos/static/media/logo.fe3620904191a1d8c405abb7fc0677d8.svg",
+    "static/media/first-quarter-moon.svg": "/conversemos/static/media/first-quarter-moon.fc063c80174b91de4420819b64503833.svg",
+    "static/media/ghost.svg": "/conversemos/static/media/ghost.74bef32430b2f8932511593edae869c7.svg",
+    "static/media/nesting-dolls.svg": "/conversemos/static/media/nesting-dolls.1b611ab3ea9f739638d108643b44bbe0.svg",
+    "static/media/eggplant.svg": "/conversemos/static/media/eggplant.42e21a529a3d4778253b7f718161b6a1.svg",
+    "index.html": "/conversemos/index.html",
+    "main.32279d9b.css.map": "/conversemos/static/css/main.32279d9b.css.map",
+    "main.0c19964e.js.map": "/conversemos/static/js/main.0c19964e.js.map",
+    "453.ba8688e2.chunk.js.map": "/conversemos/static/js/453.ba8688e2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32279d9b.css",
+    "static/js/main.0c19964e.js"
+  ]
+}
