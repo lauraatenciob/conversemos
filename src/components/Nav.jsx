@@ -9,17 +9,17 @@ function Nav({ colorWhite }) {
     <>
       <li>
         <Link to="/">
-          <i class="fa-solid fa-house"></i> Inicio
+          <i className="fa-solid fa-house"></i> Inicio
         </Link>
       </li>
       <li>
         <Link to="/categories">
-          <i class="fa-solid fa-table-list"></i> Categorías
+          <i className="fa-solid fa-table-list"></i> Categorías
         </Link>
       </li>
       <li>
         <Link to="/play">
-          <i class="fa-solid fa-face-grin-wink"></i> Jugar
+          <i className="fa-solid fa-face-grin-wink"></i> Jugar
         </Link>
       </li>
     </>
