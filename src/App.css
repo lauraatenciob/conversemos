@@ -342,6 +342,10 @@ input:checked {
   letter-spacing: 1px;
 }
 
+a:visited {
+  color: inherit;
+}
+
 @media (min-width: 768px) {
   .hamburguer {
     display: none;
@@ -382,10 +386,6 @@ input:checked {
   a {
     text-decoration: none;
     max-width: 328px;
-  }
-
-  a:visited {
-    color: inherit;
   }
 
   .to-play {
