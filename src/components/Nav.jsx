@@ -34,7 +34,7 @@ function Nav({ colorWhite }) {
             color: colorWhite && activeHam === false ? "#f2f0f4" : "#ff5970",
           }}
         >
-          <Logo />
+          <Link to="/"><Logo /></Link>
           <div className="menu">{menuItems}</div>
           <button
             className={

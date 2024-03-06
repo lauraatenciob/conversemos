@@ -59,7 +59,7 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <Link to="/play">
+        <Link to="/play" className="to-play">
           <button className="button main-button">Empezar</button>
         </Link>
       </div>

@@ -47,10 +47,10 @@ function CategoryPage() {
           })}
         </div>
 
-        <Link to="/play">
+        <Link to="/play" className="to-play">
           <button
             disabled={selectedCategories.length === 0}
-            className="button main-button"
+            className="button main-button start"
             id="category-button"
           >
             Empezar

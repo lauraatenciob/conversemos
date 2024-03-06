@@ -7,6 +7,7 @@
 .container {
   margin: 0 16px;
   padding-top: 74px;
+  min-height: calc(100vh - 100px);
 }
 
 nav {
@@ -153,6 +154,7 @@ nav {
   font-weight: 500;
   box-shadow: var(--card-shadow);
   transition: transform 15ms linear;
+  cursor: pointer;
 }
 
 .button:disabled {
@@ -252,6 +254,7 @@ nav {
   margin-top: 32px;
   box-shadow: var(--card-shadow);
   transition: transform 15ms linear;
+  cursor: pointer;
 }
 .category-card:active {
   transform: scale(0.98);
@@ -379,6 +382,15 @@ input:checked {
   a {
     text-decoration: none;
     max-width: 328px;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  .to-play {
+    display: block;
+    margin: 0 auto;
   }
 
   .container {
