@@ -1,11 +1,13 @@
-# Conversemos
+
+![logo](https://github.com/lauraatenciob/conversemos/assets/155483267/080abbc5-c509-49c7-b91d-bcba9a5e348e)
 
 Conversemos is a web application that helps you start conversations with your friends in a fun and interesting way.
 It consists of generating random open questions categorized into five different topics that you can choose from and start enjoying meaningful moments getting to know your friends better.
 
 ## Inspiration
 
-The idea arose precisely hanging out with my group of friends, we realized that the conversation became more interesting and entertaining when we talked about random topics in which we all gave our opinions. So, if you are one of those who likes to enjoy a long time talking and laughing about everything you can take a look at this [link]()
+The idea arose precisely hanging out with my group of friends, we realized that the conversation became more interesting and entertaining when we talked about random topics in which we all gave our opinions. So, if you are one of those who likes to enjoy a long time talking and laughing about everything you can take a look at this [link](https://conversemos.vercel.app/)
+
 
 ## Requirements:
 
@@ -32,7 +34,7 @@ To land the idea and have a guide of what I was going to build, I defined the fo
 I defined a simple flow of 3 views: home page, categories page and question view.
 I made the designs in Figma following the idea of a attractive, fun and easy-to-use interface. Taking into account the target audience and the concept of gaming in informal meetings, I gave greater focus to the mobile interface.
 
-## Technologies Used
+## Used Technologies
 
 The project was developed using React JS, React Router to allow the user to navigate the pages, and Redux to maintain the flow of information between the views.
 
